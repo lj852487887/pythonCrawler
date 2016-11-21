@@ -27,9 +27,25 @@ showMatch(pa2_3,str)
 
 # [] match any chars in it for one time
 pa3 = r'[A-Z0-9]'
-pa4 = r'\d'
-pa5 = r'\w'
+pa3_1 = r'\d'
+pa3_2 = r'\w'
 showMatch(pa3,str)
 showMatch(pa3,str2)
-showMatch(pa4,str2)
-showMatch(pa5,str)
+showMatch(pa3_1,str2)
+showMatch(pa3_2,str)
+
+#^ match start of a string
+#$ match end of a string
+pa4 = r'.*n$'
+pa4_1 = r'^[0-9]{4}'
+showMatch(pa4,str)
+showMatch(pa4_1,str2)
+
+#^ match start of a string
+str3 = "1000dd@163.com"
+str3_1 = "1000dd@126.com"
+
+pa5 = r'(126|163).com'
+pa5_1 = r'^[0-9]{4}'
+showMatch(pa5,str3)
+showMatch(pa5,str3_1)
